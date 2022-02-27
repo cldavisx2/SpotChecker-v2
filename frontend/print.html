@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot Check Item List</title>
+    <style>
+        @page{
+            size:auto;
+            margin:.25in;
+        }
+        body,html{
+            margin:auto;
+            padding: 0;
+            background-color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1{
+            width: 8in;
+            margin-top:.5in;
+            text-align: center;
+        }
+
+        table,th,tr,td{
+            border:solid 1px black;
+            border-collapse: collapse;
+            color:black;
+            font-size:12px;
+        }
+        
+        th{
+            font-weight: bold;
+        }
+
+        td{
+            text-align: center;
+            vertical-align: center;
+            height:0.20in;
+            padding-left: 3px;
+        }
+        .description-cell{
+            text-align: left;
+            font-size:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- this will be loaded into an iframe -->
+    <!-- it will have it's own css -->
+    <!-- it's width will be in inches 'in' -->
+    <!-- rows will be added to a table dynamically in case we ever put the X num random items funtionality in -->
+    <!-- use 'onload' to print it when it has loaded  -->
+    <!-- <h1>Spot Check Inventory *Todays Date*</h1> -->
+    <table id = 'print-table' style="width: 8in">
+        <colgroup>
+            <col style = "width:.71in">
+            <col style = "width:2.44in">
+            <col style = "width: .73in">
+            <col style = "width: 1.68in">
+            <col style = "width: 1.69in">
+            <col style = "width: .7in">
+        </colgroup>
+
+        <tr>
+            <th>SKU</th>
+            <th>Description</th>
+            <th>Expected</th>
+            <th>Back</th>
+            <th>Front</th>
+            <th>Total</th>
+        </tr>
+
+    </table>
+    
+</body>
+</html>

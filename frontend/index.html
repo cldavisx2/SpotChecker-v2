@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot Check</title>
+    <link rel = "stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/23259edcbb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = 'content-container-container'>
+        <div id = 'content-container'>
+            <div id = 'upload-screen'>
+                <div id = 'upload-instructions'>
+                    <h2>Instructions</h2>
+                    <p>1) Generate the "Spot Check Item Value List" report memorized in RMS.</p>
+                    <p>2) Export the report with the following settings: Destination = "File", File Format = "Comma Separated (CSV)".</p>
+                    <p>3) Select the exported CSV file below, then click upload to generate the list of items to be counted.</p>
+                </div>
+                <div id = 'upload-buttons'>
+                    <label id = "upload-label" class = 'upload-buttons'>
+                        <input id = 'file-selector' type = "file" name = "myFile" />
+                        Select CSV
+                    </label>
+                    <div id = 'upload-button' class = 'upload-buttons'>
+                        <p id = 'upload-text'>Upload</p>
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    </div>
+                </div>
+                <div id = 'file-name'></div>
+            </div>
+        </div>
+        <div id = "scroll-container">
+            <i class="fas fa-caret-up"></i>
+            <div id = "scroll-bar"></div>
+            <i class="fas fa-caret-down"></i>
+        </div>
+        <iframe id = "ifrm" src = "print.html"></iframe>
+    </div>
+</body>
+<script src = "script.js"></script>
+</html>
