@@ -165,6 +165,8 @@ iframe{
     color:orange;
     transform: translate(-5px,-27px);
     opacity: 0;
+    max-width: 750px;
+
 }
 
 #item-head p{
@@ -244,6 +246,14 @@ iframe{
     background-color: rgb(139, 91, 1);
 }
 
+
+#page-footer{
+    position:absolute;
+    bottom:0;
+    left:5px;
+    font-size:12px;
+    color:rgb(100,100,100);
+}
 
 
 

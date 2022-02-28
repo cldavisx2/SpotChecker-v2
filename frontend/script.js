@@ -31,7 +31,7 @@ const displayItems = items => {
 
     //add the title and date to the printable document
     const d = new Date();
-    let myDate = `${d.getMonth()+1}/${d.getDate()+1}/${d.getFullYear()}`
+    let myDate = `${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()}`
     let ifrm = document.getElementById('ifrm');
     let printDoc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
     printDoc.getElementById('print-table').insertAdjacentHTML('beforebegin',`<h1>Spot Check Inventory ${myDate}</h1>`)
@@ -186,7 +186,7 @@ getXLS = () => {
                                     const url = URL.createObjectURL(blob);
                                     const a = document.createElement('a');
                                     a.href = url;
-                                    a.download = 'Item List';
+                                    a.download = 'Item List.xlsx';
                                     a.click();
                                     //take away the spinner
                                     document.getElementById('download-text').style.opacity = '1';
