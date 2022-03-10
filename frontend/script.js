@@ -200,6 +200,7 @@ print = () => {
     //display the spinner
     document.getElementById('print-text').style.opacity = '0';
     document.getElementById('lds-ellipsis-p').style.opacity = '1';
+    //wait a fake second the open the print window
     setTimeout(() => {
         document.getElementById('print-text').style.opacity = '1';
         document.getElementById('lds-ellipsis-p').style.opacity = '0';
