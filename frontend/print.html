@@ -8,12 +8,13 @@
     <style>
         @page{
             size:auto;
-            margin:.25in;
+            /* margin:.25in; */
             margin:0;
         }
         body,html{
             margin:auto;
             padding: 0;
+            /* so the printing isn't cut off */
             margin: 0 .125in;
             background-color: white;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -58,11 +59,7 @@
 </head>
 <body>
     <!-- this will be loaded into an iframe -->
-    <!-- it will have it's own css -->
-    <!-- it's width will be in inches 'in' -->
-    <!-- rows will be added to a table dynamically in case we ever put the X num random items funtionality in -->
-    <!-- use 'onload' to print it when it has loaded  -->
-    <!-- <h1>Spot Check Inventory *Todays Date*</h1> -->
+    <!-- rows will be added to the table dynamically-->
     <table id = 'print-table' style="width: 8in">
         <colgroup>
             <col style = "width:.71in">
