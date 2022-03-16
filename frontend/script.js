@@ -110,7 +110,7 @@ const displayItems = items => {
         printButton.clientHeight;
         dLButton.style.opacity = "1";
         printButton.style.opacity = "1";                                             
-    },3700)
+    },4100)
 }
 
 //launch an error message if something is wrong with the file
