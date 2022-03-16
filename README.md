@@ -1,7 +1,9 @@
 # SpotChecker v2
 _An inventory audit helper tool_
 
-Generates a list of items to be counted based on a .CSV which the user uploads. The generated list can then be downloaded as an .XLSX file or printed directly from the browser
+## What Does It Do?
+
+Generates a form containing a list of items to be counted based on a .CSV file which the user uploads. The generated form can then be downloaded as an .XLSX file or printed directly from the browser. The uploaded .CSV file contains the stores entire inventory while the output form contains 40 items selected per critera set forth by headquarters.
 
 ## Tech Stack
 

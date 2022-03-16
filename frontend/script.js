@@ -42,6 +42,26 @@ const displayItems = items => {
     //put in the new stuff once everything is cleared
     //fade in each item individually after the screen has cleared, hence the timeout
     setTimeout(() =>{
+        //insert the download and print buttons first to avoid them causing the table to be resized which looks tacky
+        document.getElementsByTagName('BODY')[0]
+        .insertAdjacentHTML('beforeend','<div id = "dlp-buttons-container"></div>')
+
+        //DONWLOAD
+        document.getElementById('dlp-buttons-container')
+                .insertAdjacentHTML('beforeend', `<div id = 'download-button' class = 'dlp-button'>
+                                                    <p id = "download-text">Download XLS</p>
+                                                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                                                </div>`);
+        document.getElementById('download-button').addEventListener('click',getXLS);
+
+        //PRINT
+        document.getElementById('dlp-buttons-container')
+        .insertAdjacentHTML('beforeend',`<div id = 'print-button' class = 'dlp-button'>
+                                            <p id = "print-text">Print</p>
+                                            <div class="lds-ellipsis" id = "lds-ellipsis-p"><div></div><div></div><div></div><div></div></div>
+                                        </div>`);
+        document.getElementById('print-button').addEventListener('click', print);
+
         //Insert column titles
         document.getElementById('content-container-container')
                 .insertAdjacentHTML('beforeend','<div id = "item-head"><p>Item Description</p><p id = "sku-head">Sku</p></div>');
@@ -82,27 +102,8 @@ const displayItems = items => {
         })
     },2000)
 
-    //add in the download and print button once the visible area of item cards has been filled
+    //Fade in the download and print button once the visible area of item cards has been filled
     setTimeout(() => {
-        document.getElementsByTagName('BODY')[0]
-                .insertAdjacentHTML('beforeend','<div id = "dlp-buttons-container"></div>')
-
-        //DONWLOAD
-        document.getElementById('dlp-buttons-container')
-                .insertAdjacentHTML('beforeend', `<div id = 'download-button' class = 'dlp-button'>
-                                                       <p id = "download-text">Download XLS</p>
-                                                       <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                                                  </div>`);
-        document.getElementById('download-button').addEventListener('click',getXLS);
-        
-        //PRINT
-        document.getElementById('dlp-buttons-container')
-        .insertAdjacentHTML('beforeend',`<div id = 'print-button' class = 'dlp-button'>
-                                            <p id = "print-text">Print</p>
-                                            <div class="lds-ellipsis" id = "lds-ellipsis-p"><div></div><div></div><div></div><div></div></div>
-                                        </div>`);
-        document.getElementById('print-button').addEventListener('click', print);
-
         //fade in the dl & print button
         let dLButton = document.getElementById('download-button');
         let printButton = document.getElementById('print-button');
